@@ -1,0 +1,14 @@
+A Group:
+    1. Ver veterinarios por especialidad (Ver vet cirujano vascular) 
+    2. Listar medicamento por laboratorio (Genfar)
+    3. Listar Mascota por especie (Felino)
+    4. Listar propietarios con sus mascotas
+    5. Listar medicamento por precio (Mayor a 50.000)
+    6. Listar mascotas por motivo (Vacunación primer trimestre 2023)
+B Group:
+    7. Listar todas las mascotas por especie
+    8. Listar movimientos de inventario y valor total de cada uno
+    9. Listar mascotas por veterinario
+    10. Listar proveedores de medicamento X
+    11. Listar mascotas por raza (Golden Retriver) + propietario
+    12. Mostrar cantidad total de mascotas pertenecientes a una raza.(Lista de razas + cantidad correspondiente)
