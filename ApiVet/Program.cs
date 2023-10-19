@@ -20,9 +20,10 @@ builder.Services.AddAplicacionServices();
 builder.Services.ConfigureApiVersioning();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-//builder.Services.AddAutoMapper(Assembly.GetEntryAssembly());
+builder.Services.AddAutoMapper(Assembly.GetEntryAssembly());
 builder.Services.ConfigureCors();
 builder.Services.ConfigureRateLimiting();
+
 
 builder.Logging.AddSerilog(logger);
 builder.Services.AddJwt(builder.Configuration);

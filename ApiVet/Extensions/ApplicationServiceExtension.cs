@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using Domain.Entities;
 using ApiVet.Helpers;
@@ -11,6 +8,8 @@ using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.IdentityModel.Tokens;
 using Domain.Interfaces;
 using Application.UnitOfWork;
+using ApiVet.Services;
+using Microsoft.AspNetCore.Identity;
 
 namespace ApiVet.Extensions;
 public static class ApplicationServiceExtension

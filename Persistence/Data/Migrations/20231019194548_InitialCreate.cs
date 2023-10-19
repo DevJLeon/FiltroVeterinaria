@@ -449,8 +449,7 @@ namespace Persistence.Data.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_mascota_RazaIdFk",
                 table: "mascota",
-                column: "RazaIdFk",
-                unique: true);
+                column: "RazaIdFk");
 
             migrationBuilder.CreateIndex(
                 name: "IX_medicamento_LaboratorioIdFk",
