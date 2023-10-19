@@ -7,7 +7,7 @@ namespace ApiVet.Dtos
 {
     public class RazaDto
     {
-        public string Id { get; set;}
+        public int Id { get; set;}
         public string Nombre {get;set;}
         public int EspecieIdFk {get;set;}
         public EspecieDto Especie {get;set;}
