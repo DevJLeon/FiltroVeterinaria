@@ -25,5 +25,26 @@ namespace Application.Repository
         return await _context.Propietarios
         .FirstOrDefaultAsync(p =>  p.Id == id);
     }
+
+    public async Task<IEnumerable<object>> Consulta3A()
+    {
+        var propietarios = 
+            from p in _context.Propietarios
+            select new
+            {
+                Nombre = p.Nombre,
+                Mascotas = (
+                    from m in _context.Mascotas
+                    where m.PropietarioIdFk == p.Id
+                    select new
+                    {
+                        Nombre = m.Nombre,
+                        Especie = m.Raza.Especie.Nombre
+                    }).ToList()
+            };
+            var Resultado = await propietarios.ToListAsync();
+            return Resultado;
+    }
+
 } 
 }

@@ -83,4 +83,14 @@ namespace ApiVet.Controllers;
            await unitofwork.SaveAsync();
            return NoContent();
         }
+
+        [HttpGet("Consulta1")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<IEnumerable<object>>> Consulta1A()
+        {
+            var entidad = await unitofwork.Veterinarios.Consulta1A();
+            return mapper.Map<List<object>>(entidad);
+        }
+        
     }

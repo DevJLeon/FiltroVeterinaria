@@ -25,5 +25,9 @@ public class MascotaRepository  : GenericRepo<Mascota>, IMascota
         return await _context.Mascotas
         .FirstOrDefaultAsync(p =>  p.Id == id);
     }
+    public async Task<IEnumerable<object>> Consulta3A()
+    {
+        
+    }
 } 
 }

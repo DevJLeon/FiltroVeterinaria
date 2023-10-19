@@ -83,4 +83,13 @@ namespace ApiVet.Controllers;
            await unitofwork.SaveAsync();
            return NoContent();
         }
+
+        [HttpGet("Consulta3A")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<IEnumerable<object>>> Consulta3A()
+        {
+            var nameVar = await unitofwork.Propietarios.Consulta3A();
+            return mapper.Map<List<object>>(nameVar);
+        }
     }

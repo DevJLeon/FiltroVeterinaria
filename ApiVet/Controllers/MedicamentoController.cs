@@ -83,4 +83,12 @@ public class MedicamentoController : BaseApiController
        await unitofwork.SaveAsync();
        return NoContent();
     }
+    [HttpGet("Consulta2A")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<IEnumerable<object>>> Consulta2A()
+    {
+        var nameVar = await unitofwork.Medicamentos.Consulta2A();
+        return mapper.Map<List<object>>(nameVar);
+    }
 }

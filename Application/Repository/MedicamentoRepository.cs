@@ -17,6 +17,7 @@ namespace Application.Repository
     public override async Task<IEnumerable<Medicamento>> GetAllAsync()
     {
         return await _context.Medicamentos
+        .Include(p=>p.Laboratorio)
             .ToListAsync();
     }
 
@@ -24,6 +25,20 @@ namespace Application.Repository
     {
         return await _context.Medicamentos
         .FirstOrDefaultAsync(p =>  p.Id == id);
+    }
+    public async Task<IEnumerable<object>> Consulta2A()
+    {
+        var medicamentos = await (
+            from meds in _context.Medicamentos
+            where meds.LaboratorioIdFk == 1
+            select new
+            {
+                Nombre = meds.Nombre,
+                Laboratorio=meds.Laboratorio.Nombre,
+                Cantidad = meds.Cantidad
+            }
+        ).ToListAsync();
+        return medicamentos;
     }
 } 
 }

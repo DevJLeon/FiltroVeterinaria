@@ -17,6 +17,7 @@ namespace Application.Repository
     public override async Task<IEnumerable<Raza>> GetAllAsync()
     {
         return await _context.Razas
+        .Include(p=>p.Especie)
             .ToListAsync();
     }
 
