@@ -13,9 +13,6 @@ Sistema de administración para una veterinaria. Este sistema permitirá a los a
 
 ## Uso 🕹
 
-En primer lugar, en los csv esta el administrador con el usuario:admin y la contraseña : 123
-del cual nesecitaremos el token para el registro de usuarios ya que solo el administrador podra hacer todo con respecto al crud de los usuarios
-
 Una vez que el proyecto esté en marcha, puedes acceder a los diferentes endpoints disponibles:
 ## Endpoints
 
@@ -69,4 +66,3 @@ Todas los consultas son tipo GET:
 
     http://localhost:5056/api/veterinaria/Consulta12B
 
-## Información
