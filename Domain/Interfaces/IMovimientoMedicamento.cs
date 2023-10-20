@@ -9,6 +9,6 @@ namespace Domain.Interfaces
 {
     public interface IMovimientoMedicamento:IGenericRepo<MovimientoMedicamento>
     {
-        
+        Task<IEnumerable<object>> Consulta8B();
     }
 }

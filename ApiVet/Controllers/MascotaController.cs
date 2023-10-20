@@ -83,4 +83,46 @@ public class MascotaController : BaseApiController
        await unitofwork.SaveAsync();
        return NoContent();
     }
+
+    [HttpGet("Consulta3A")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<IEnumerable<object>>> Consulta3A()
+    {
+        var nameVar = await unitofwork.Mascotas.Consulta3A();
+        return mapper.Map<List<object>>(nameVar);
+    }
+    [HttpGet("Consulta6A")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<IEnumerable<object>>> Consulta6A()
+    {
+        var nameVar = await unitofwork.Mascotas.Consulta6A();
+        return mapper.Map<List<object>>(nameVar);
+    }
+    [HttpGet("Consulta9B")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<IEnumerable<object>>> Consulta9B()
+    {
+        var nameVar = await unitofwork.Mascotas.Consulta9B();
+        return mapper.Map<List<object>>(nameVar);
+    }
+    [HttpGet("Consulta11B")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<IEnumerable<object>>> Consulta11B()
+    {
+        var nameVar = await unitofwork.Mascotas.Consulta11B();
+        return mapper.Map<List<object>>(nameVar);
+    }
+    [HttpGet("Consulta12B")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<IEnumerable<object>>> Consulta12B()
+    {
+        var nameVar = await unitofwork.Mascotas.Consulta12B();
+        return mapper.Map<List<object>>(nameVar);
+    }
+    
 }

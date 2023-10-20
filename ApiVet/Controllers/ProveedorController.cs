@@ -83,4 +83,12 @@ public class ProveedorController : BaseApiController
        await unitofwork.SaveAsync();
        return NoContent();
     }
+    [HttpGet("Consulta10B")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<IEnumerable<object>>> Consulta10B()
+    {
+        var nameVar = await unitofwork.Proveedores.Consulta10B();
+        return mapper.Map<List<object>>(nameVar);
+    }
 }

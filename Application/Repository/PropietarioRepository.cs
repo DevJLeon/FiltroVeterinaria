@@ -26,7 +26,7 @@ namespace Application.Repository
         .FirstOrDefaultAsync(p =>  p.Id == id);
     }
 
-    public async Task<IEnumerable<object>> Consulta3A()
+    public async Task<IEnumerable<object>> Consulta2A()
     {
         var propietarios = 
             from p in _context.Propietarios

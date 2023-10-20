@@ -84,12 +84,12 @@ namespace ApiVet.Controllers;
            return NoContent();
         }
 
-        [HttpGet("Consulta3A")]
+        [HttpGet("Consulta4A")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<IEnumerable<object>>> Consulta3A()
+        public async Task<ActionResult<IEnumerable<object>>> Consulta2A()
         {
-            var nameVar = await unitofwork.Propietarios.Consulta3A();
+            var nameVar = await unitofwork.Propietarios.Consulta2A();
             return mapper.Map<List<object>>(nameVar);
         }
     }

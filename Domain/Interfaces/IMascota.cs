@@ -9,6 +9,10 @@ namespace Domain.Interfaces
 {
     public interface IMascota:IGenericRepo<Mascota>
     {
-        
+        Task<IEnumerable<object>> Consulta3A();
+        Task<IEnumerable<object>> Consulta6A();
+        Task<IEnumerable<object>> Consulta9B();
+        Task<IEnumerable<object>> Consulta11B();
+        Task<IEnumerable<object>> Consulta12B();
     }
 }

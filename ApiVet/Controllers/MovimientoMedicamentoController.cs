@@ -83,4 +83,12 @@ public class MovimientoMedicamentoController : BaseApiController
        await unitofwork.SaveAsync();
        return NoContent();
     }
+    [HttpGet("Consulta8B")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<IEnumerable<object>>> Consulta8B()
+    {
+        var nameVar = await unitofwork.MovimientoMedicamentos.Consulta8B();
+        return mapper.Map<List<object>>(nameVar);
+    }
 }

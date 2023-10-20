@@ -91,4 +91,12 @@ public class MedicamentoController : BaseApiController
         var nameVar = await unitofwork.Medicamentos.Consulta2A();
         return mapper.Map<List<object>>(nameVar);
     }
+    [HttpGet("Consulta5A")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<IEnumerable<object>>> Consulta5A()
+    {
+        var nameVar = await unitofwork.Medicamentos.Consulta5A();
+        return mapper.Map<List<object>>(nameVar);
+    }
 }

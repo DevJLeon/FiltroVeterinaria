@@ -9,6 +9,6 @@ namespace Domain.Interfaces
 {
     public interface IProveedor:IGenericRepo<Proveedor>
     {
-        
+        Task<IEnumerable<object>> Consulta10B();
     }
 }

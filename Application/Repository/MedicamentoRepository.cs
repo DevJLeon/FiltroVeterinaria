@@ -29,16 +29,31 @@ namespace Application.Repository
     public async Task<IEnumerable<object>> Consulta2A()
     {
         var medicamentos = await (
-            from meds in _context.Medicamentos
-            where meds.LaboratorioIdFk == 1
+            from m in _context.Medicamentos
+            where m.LaboratorioIdFk == 1
             select new
             {
-                Nombre = meds.Nombre,
-                Laboratorio=meds.Laboratorio.Nombre,
-                Cantidad = meds.Cantidad
+                Nombre = m.Nombre,
+                Laboratorio=m.Laboratorio.Nombre,
+                Cantidad = m.Cantidad
             }
         ).ToListAsync();
         return medicamentos;
     }
+
+        public async Task<IEnumerable<object>> Consulta5A()
+        {
+            var medicamento = await(
+                from m in _context.Medicamentos
+                where m.Precio >= 50000
+                select new
+                {
+                    Nombre = m.Nombre,
+                    Cantidad = m.Cantidad,
+                    Precio = m.Precio
+                }
+            ).ToListAsync();
+        return medicamento;
+        }
 } 
 }
