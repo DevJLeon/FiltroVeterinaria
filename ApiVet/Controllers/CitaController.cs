@@ -3,9 +3,10 @@ using AutoMapper;
 using Domain.Entities;
 using Domain.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ApiVet.Controllers;
+[Authorize]
 public class CitaController : BaseApiController
 {
     private readonly IUnitOfWork unitofwork;
