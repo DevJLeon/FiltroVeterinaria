@@ -9,7 +9,7 @@ Sistema de administración para una veterinaria. Este sistema permitirá a los a
 - Generación y utilización del token.
 - CRUD completo para cada entidad.
 - Vista de las consultas requeridas.
-- Para cada controlador GET una version con paginacion y otra sin paginacion.
+- Para cada controlador GET una version con paginacion
 
 ## Uso 🕹
 
